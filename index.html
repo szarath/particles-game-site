@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Particles Game</title>
+    <style>
+        :root {
+            color-scheme: dark;
+            --bg: radial-gradient(circle at top, #1b2735, #090a0f 60%);
+            --card: rgba(13, 17, 23, 0.85);
+            --accent: #ffd166;
+            --accent-strong: #ff7b00;
+            --text: #f8f8f8;
+            --muted: #b0b7c3;
+        }
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            font-family: "Space Grotesk", "Segoe UI", system-ui, -apple-system, sans-serif;
+            min-height: 100vh;
+            background: var(--bg);
+            color: var(--text);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+        main {
+            width: min(960px, 100%);
+            background: var(--card);
+            border-radius: 24px;
+            padding: clamp(1.5rem, 3vw, 3rem);
+            box-shadow: 0 30px 90px rgba(0,0,0,0.45);
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+        header {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            padding-bottom: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        header h1 {
+            margin: 0;
+            font-size: clamp(2rem, 5vw, 3rem);
+            letter-spacing: 0.04em;
+        }
+        header span {
+            background: rgba(255,255,255,0.08);
+            padding: 0.35rem 0.9rem;
+            border-radius: 999px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--muted);
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.25rem;
+            margin-bottom: 2rem;
+        }
+        .card {
+            background: rgba(255,255,255,0.03);
+            border-radius: 20px;
+            padding: 1.25rem;
+            border: 1px solid rgba(255,255,255,0.06);
+        }
+        .card h3 {
+            margin-top: 0;
+            font-size: 1.15rem;
+            color: var(--accent);
+            letter-spacing: 0.06em;
+        }
+        .card p {
+            color: var(--muted);
+            line-height: 1.6;
+        }
+        .cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            text-decoration: none;
+            color: var(--bg);
+            background: linear-gradient(120deg, var(--accent), var(--accent-strong));
+            padding: 0.9rem 1.75rem;
+            border-radius: 999px;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            transition: transform 0.2s ease;
+        }
+        .cta:hover {
+            transform: translateY(-2px);
+        }
+        footer {
+            color: var(--muted);
+            font-size: 0.85rem;
+            text-align: center;
+        }
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <div>
+                <h1>Particles</h1>
+                <p>An arcade survival game packed with dodge combos, boss fights, and upgrade chases.</p>
+            </div>
+            <span>v2.6</span>
+        </header>
+
+        <section class="grid">
+            <article class="card">
+                <h3>Rapid Dodge Gameplay</h3>
+                <p>Stay alive against swarms of particle enemies, chain near-misses for combo multipliers, and go head-to-head with bosses every 60 seconds.</p>
+            </article>
+            <article class="card">
+                <h3>Upgradeable Loadout</h3>
+                <p>Earn coins to unlock skins, particle trails, and gameplay upgrades including score multipliers, power-up duration boosts, and a coin magnet.</p>
+            </article>
+            <article class="card">
+                <h3>Optimized for Fluid Play</h3>
+                <p>Careful frame pacing, minimal disk I/O, and sound/vibration batching keep gameplay responsive even on mid-range hardware.</p>
+            </article>
+        </section>
+
+        <a class="cta" href="https://play.google.com/store/apps/details?id=com.ets.live" target="_blank" rel="noopener">
+            Download on Google Play →
+        </a>
+
+        <footer>
+            <p>For monetization compliance, make sure <code>app-ads.txt</code> is hosted at <code>https://yourdomain.com/app-ads.txt</code>.</p>
+        </footer>
+    </main>
+</body>
+</html>
